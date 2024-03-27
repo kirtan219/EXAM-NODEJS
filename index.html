@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Centered Form</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .form-container {
+        text-align: center;
+      }
+      input[type="text"],
+      input[type="password"] {
+        padding: 10px;
+        margin: 5px;
+        width: 250px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      input[type="submit"] {
+        padding: 10px 20px;
+        margin: 5px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Enter Your Details</h2>
+      <form id="myForm">
+        <input type="text" id="name" placeholder="Name"><br>
+        <input type="password" id="password" placeholder="Password"><br>
+        <input type="text" id="id" placeholder="ID"><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+    <script>
+      document.getElementById("myForm").addEventListener("submit", function(event){
+        event.preventDefault(); // Prevent form submission
+        var name = document.getElementById("name").value;
+        var password = document.getElementById("password").value;
+        var id = document.getElementById("id").value;
+        // Do something with the form values (e.g., send them to a server)
+        console.log("Name:", name);
+        console.log("Password:", password);
+        console.log("ID:", id);
+      });
+    </script>
+  </body>
+</html>
